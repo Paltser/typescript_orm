@@ -8,6 +8,16 @@ const article = new mongoose.Schema({
     content: {
         required: true,
         type: String
+    },
+    comments: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Comment'
+        }
+    ],
+    author: {
+        required: true,
+        type: mongoose.Schema.Types.ObjectId, ref: 'Author'
     }
 })
 

@@ -4,6 +4,7 @@ import randomController from "./controllers/random";
 import mongoose from "mongoose";
 import ArticleController from "./controllers/articleController";
 import commentController from "./controllers/commentController";
+import authorController from "./controllers/authorController";
 
 
 const app: Express = express();
@@ -27,6 +28,7 @@ app.use('/', randomController);
 app.use('/', stringsController);
 app.use('/', ArticleController);
 app.use('/', commentController);
+app.use('/', authorController);
 
 app.listen(3000, () => {
     console.log(`[server]: Server is running at http://localhost:3000`);
